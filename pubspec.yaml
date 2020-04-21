@@ -51,6 +51,7 @@ flutter:
    - asserts/pizza.png
    - asserts/coffee.png
    - asserts/friedricem.jpg
+   - asserts/riceandcurry.jpg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

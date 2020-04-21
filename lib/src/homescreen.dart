@@ -5,6 +5,9 @@ import 'widgets/food_card.dart';
 import 'widgets/search_field.dart';
 import 'widgets/bought_foods.dart';
 
+//Data
+import 'data/food_data.dart';
+
 class HomeScreen extends StatefulWidget{
   @override
   _HomeScreenState createState()=>_HomeScreenState();
@@ -12,7 +15,7 @@ class HomeScreen extends StatefulWidget{
 
 class _HomeScreenState extends State<HomeScreen>
 {
-
+List<Food> _foods=foods;
   
 @override
 Widget build(BuildContext context)
@@ -48,12 +51,26 @@ Widget build(BuildContext context)
           ],
         ),
         SizedBox(height: 20.0,),
-        Container(
-            child: BoughtFoods(),
+        Column(
+          children: _foods.map(_buildFoodItems).toList(),
         ),
-        ],
+      ],
+    ),
+  );    
+}
+Widget _buildFoodItems(Food food) 
+{
+  return Container(
+    margin: EdgeInsets.only(bottom:20.0),
+    child:BoughtFoods(
+      id:food.id,
+      name: food.name,
+      imagePath: food.imagePath,
+      category: food.category,
+      discount: food.discount,
+      price: food.price,
+      ratings: food.ratings,
     ),
   );
-      
 }
 }
