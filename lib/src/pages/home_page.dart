@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:food_delivery_app/src/widgets/food_category.dart';
-import 'widgets/home_top_info.dart';
-import 'widgets/food_card.dart';
-import 'widgets/search_field.dart';
-import 'widgets/bought_foods.dart';
-import 'models/food_model.dart';
+import '../widgets/home_top_info.dart';
+import '../widgets/food_card.dart';
+import '../widgets/search_field.dart';
+import '../widgets/bought_foods.dart';
+import '../models/food_model.dart';
 
 //Data
-import 'data/food_data.dart';
+import '../data/food_data.dart';
 
 class HomeScreen extends StatefulWidget{
   @override
