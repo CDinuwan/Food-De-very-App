@@ -64,22 +64,33 @@ class OrderCard extends StatelessWidget {
                   height: 25.0,
                   width: 120.0,
                   child: ListView(
+                    scrollDirection: Axis.horizontal,
                     children:<Widget>[
-                      Row(
-                        children:<Widget>[
-                          Text("Fried Rice",style: TextStyle(color: Colors.grey),),
-                          SizedBox(width:5.0,),
-                          Text("x",style: TextStyle(color:Colors.red,fontWeight: FontWeight.bold),),
-                        ]
-                      ),
-                    ]
+                      Container(
+                        margin:EdgeInsets.only(right: 10.0),
+                        child: Row(
+                          children:<Widget>[
+                            Text("Fried Rice",style: TextStyle(color: Colors.grey,fontWeight: FontWeight.bold),),
+                            SizedBox(width:5.0,),
+                            InkWell(
+                              onTap: (){},
+                              child: Text("x",
+                            style: TextStyle(color:Colors.red,fontWeight: FontWeight.bold),)),
+                          ],
+                  ),
+                ),
+                    ],
                   ),
                 ),
               ],
             ),
+            Spacer(),
+            GestureDetector(
+              onTap: (){},
+              child: Icon(Icons.cancel,color: Colors.grey,))
           ],
         ),
       ),
     );
-  }
+  } 
 }

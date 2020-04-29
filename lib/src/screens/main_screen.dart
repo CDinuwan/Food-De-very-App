@@ -64,12 +64,6 @@ void initState() {
         ]
       ),
       body: currentPage,
-      appBar: currentTabIndex==1?AppBar(
-        title:Text("Your Food Cart",style: TextStyle(color:Colors.black87),),
-        centerTitle: true,
-        backgroundColor: Colors.white,
-        elevation: 0.0,
-      ):null,
     );
   }
 }
