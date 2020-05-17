@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'package:food_delivery_app/src/pages/signin_page.dart';
 import '../widgets/order_card.dart';
 
 class OrderPage extends StatefulWidget
@@ -73,6 +73,11 @@ Widget _buildTotalContainer()
         ],
       ),
       SizedBox(height:20.0),
+      GestureDetector(
+        onTap: () {
+          Navigator.of(context).push(MaterialPageRoute(builder: (BuildContext)=>SignInPage()));
+        },
+      ),
       Container(
         width: MediaQuery.of(context).size.width,
         height: 50.0,
