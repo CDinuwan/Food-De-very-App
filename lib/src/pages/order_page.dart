@@ -75,7 +75,7 @@ Widget _buildTotalContainer()
       SizedBox(height:20.0),
       GestureDetector(
         onTap: () {
-          Navigator.of(context).push(MaterialPageRoute(builder: (BuildContext)=>SignInPage()));
+          Navigator.of(context).push(MaterialPageRoute(builder: (BuildContext context)=>SignInPage()));
         },
       ),
       Container(
