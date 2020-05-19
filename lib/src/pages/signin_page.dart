@@ -8,6 +8,8 @@ class SignInPage extends StatefulWidget {
 }
 
 class _SignInPageState extends State<SignInPage> {
+
+  bool _trogleVisibility=true;
   Widget _buildEmailTextField()
   {
     return TextFormField(
@@ -28,7 +30,15 @@ class _SignInPageState extends State<SignInPage> {
           color:Colors.black,
           fontSize: 10.0,
         ),
+        suffixIcon: IconButton(
+          onPressed: (){
+            setState(() {
+              _trogleVisibility=!_trogleVisibility;
+            });
+          } ,
+          icon:_trogleVisibility ? Icon(Icons.visibility_off):Icon(Icons.visibility))
       ),
+      obscureText: _trogleVisibility,
     );
   }
   @override
@@ -55,12 +65,13 @@ class _SignInPageState extends State<SignInPage> {
               child: Column(
               children:<Widget>[
                 _buildEmailTextField(),
+                SizedBox(height: 20.0,),
                 _buildPasswordTextField(),
               ],
             ),
           )
         ),
-        SizedBox(height:20.0),
+        SizedBox(height:30.0),
         Container(
           height:50.0,
           decoration: BoxDecoration(
@@ -69,7 +80,15 @@ class _SignInPageState extends State<SignInPage> {
           ),
           child: Center(child: Text("Sign In",style:TextStyle(color:Colors.white,fontSize: 10.0,fontWeight: FontWeight.bold)),),
         ),
-        Divider(),
+        Divider(height:20.0),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            Text("Don't have account?",style:TextStyle(color:Colors.black,fontWeight: FontWeight.bold,fontSize: 18.0)),
+            SizedBox(width:10.0),
+            Text("SignUp",style:TextStyle(color:Colors.blueAccent,fontWeight: FontWeight.bold,fontSize: 18.0)),
+          ],
+        )
         ], 
       ),
       ),
