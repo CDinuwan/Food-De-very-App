@@ -77,10 +77,9 @@ Widget _buildTotalContainer()
         onTap: () {
           Navigator.of(context).push(MaterialPageRoute(builder: (BuildContext context)=>SignInPage()));
         },
-      ),
-      Container(
+        child:Container(
         width: MediaQuery.of(context).size.width,
-        height: 50.0,
+        height: 40.0,
         decoration: BoxDecoration(
           color:Colors.blue,
           borderRadius:BorderRadius.circular(30.0)
@@ -95,6 +94,8 @@ Widget _buildTotalContainer()
           )
         ),
       ),
+      ),
+      
     ],)
   );
 }

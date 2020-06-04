@@ -30,7 +30,7 @@ class OrderCard extends StatelessWidget {
                 ],
               ),
             ),
-            SizedBox(width: 20.0,),
+            SizedBox(width: 10.0,),
             Container(
               height: 70.0,
               width: 70.0,
@@ -50,7 +50,7 @@ class OrderCard extends StatelessWidget {
                 ]
               ),
             ),
-            SizedBox(width: 20.0,),
+            SizedBox(width: 10.0,),
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
@@ -58,7 +58,7 @@ class OrderCard extends StatelessWidget {
                   fontSize:18.0,fontWeight:FontWeight.bold
                 ),),
                 SizedBox(height: 5.0,),
-                Text("3.0",style: TextStyle(color: Colors.orangeAccent,fontSize: 16.0),),
+                Text("Rs:3.0",style: TextStyle(color: Colors.orangeAccent,fontSize: 16.0),),
                 SizedBox(height:5.0),
                 Container(
                   height: 25.0,
